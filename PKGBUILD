@@ -3,7 +3,7 @@
 pkgname=sonic-screen
 pkgver=6.6.3
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=2
+pkgrel=3
 pkgdesc='Sonic-screen is the screen management software for SonicDE Workspaces'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screen'
@@ -31,7 +31,7 @@ depends=(gcc-libs
          qt6-base
          qt6-declarative)
 makedepends=(extra-cmake-modules)
-groups=(plasma)
+groups=(sonicde)
 conflicts=(kscreen)
 provides=(kscreen)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/$_dirver.tar.gz")
