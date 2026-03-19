@@ -1,0 +1,50 @@
+---
+version: 6.6.3-1
+pkgbase:
+  name: sonic-screen
+  pkgdesc: Sonic-screen is the screen management software for SonicDE Workspaces
+  pkgver: 6.6.3
+  pkgrel: 1
+  url: https://github.com/Sonic-DE/sonic-screen
+  arch:
+    - x86_64
+  groups:
+    - plasma
+  license:
+    - LGPL-2.0-or-later
+  makedepends:
+    - extra-cmake-modules
+  depends:
+    - gcc-libs
+    - glibc
+    - kcmutils
+    - kconfig
+    - kcoreaddons
+    - kcrash
+    - kdbusaddons
+    - ki18n
+    - kimageformats
+    - kirigami
+    - kitemmodels
+    - ksvg
+    - kwindowsystem
+    - layer-shell-qt
+    - libkscreen
+    - libx11
+    - libxcb
+    - libxi
+    - libplasma
+    - plasma5support
+    - qt6-base
+    - qt6-declarative
+  provides:
+    - kscreen
+  conflicts:
+    - kscreen
+  source:
+    - sonic-screen-6.6.3.tar.gz::https://github.com/Sonic-DE/sonic-screen/archive/refs/tags/6.6.3.tar.gz
+  sha256sums:
+    - cb16a5eda5d382a709023c352acec58d7606cb23490c57fe7d4e1ead395347ce
+pkgname:
+  - name: sonic-screen
+# generated with artixpkg 0.38.2-1-any
