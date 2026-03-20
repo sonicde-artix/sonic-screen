@@ -1,10 +1,10 @@
 ---
-version: 6.6.3-3
+version: 6.6.3-4
 pkgbase:
   name: sonic-screen
   pkgdesc: Sonic-screen is the screen management software for SonicDE Workspaces
   pkgver: 6.6.3
-  pkgrel: 3
+  pkgrel: 4
   url: https://github.com/Sonic-DE/sonic-screen
   arch:
     - x86_64
@@ -29,12 +29,11 @@ pkgbase:
     - ksvg
     - kwindowsystem
     - layer-shell-qt
-    - sonic-screen-library
     - libx11
     - libxcb
     - libxi
-    - libplasma
     - plasma5support
+    - sonic-screen-library
     - qt6-base
     - qt6-declarative
   provides:
