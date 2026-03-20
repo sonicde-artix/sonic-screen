@@ -26,6 +26,7 @@ depends=(gcc-libs
          libxcb
          libxi
          plasma5support
+         sonic-interface-libraries
          sonic-screen-library
          qt6-base
          qt6-declarative)
