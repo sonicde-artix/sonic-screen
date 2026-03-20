@@ -22,11 +22,11 @@ depends=(gcc-libs
          ksvg
          kwindowsystem
          layer-shell-qt
+         libplasma
          libx11
          libxcb
          libxi
          plasma5support
-         sonic-interface-libraries
          sonic-screen-library
          qt6-base
          qt6-declarative)
