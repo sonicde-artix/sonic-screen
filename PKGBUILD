@@ -3,7 +3,7 @@
 pkgname=sonic-screen
 pkgver=6.6.3
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=4
+pkgrel=5
 pkgdesc='Sonic-screen is the screen management software for SonicDE Workspaces'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screen'
