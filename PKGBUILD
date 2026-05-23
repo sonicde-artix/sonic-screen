@@ -1,10 +1,10 @@
-# Maintainer: artist for Sonic-DE
+# Maintainer: artist for Artix Linux
 
 pkgname=sonic-screen
-pkgver=6.6.3
-_dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=5
-pkgdesc='Sonic-screen is the screen management software for SonicDE Workspaces'
+pkgver=6.6.5
+pkgrel=1
+_commit="a971755f028bd31573b4a6c7d2c260f344627012"
+pkgdesc='Screen management software for SonicDE Workspaces'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screen'
 license=(LGPL-2.0-or-later)
@@ -12,21 +12,20 @@ depends=(gcc-libs
          glibc
          kcmutils
          kconfig
-         kcoreaddons
+         sonic-frameworks-core-addons
          kcrash
          kdbusaddons
          ki18n
          kimageformats
-         kirigami
+         sonic-frameworks-quick-ui
          kitemmodels
          ksvg
-         kwindowsystem
-         layer-shell-qt
-         libplasma
          libx11
          libxcb
          libxi
          plasma5support
+         sonic-frameworks-windowsystem
+         sonic-interface-libraries
          sonic-screen-library
          qt6-base
          qt6-declarative)
@@ -34,7 +33,9 @@ makedepends=(extra-cmake-modules)
 groups=(sonicde)
 conflicts=(kscreen)
 provides=(kscreen)
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/$_dirver.tar.gz")
+replaces=(kscreen)
+makedepends+=(git)
+source=("$pkgname-$pkgver::git+$url.git#commit=$_commit")
 
 build() {
   cmake -B build  -S $pkgname-$pkgver \
@@ -49,5 +50,5 @@ package() {
   rm -r $pkgdir/usr/lib/systemd
 }
 
-sha256sums=('cb16a5eda5d382a709023c352acec58d7606cb23490c57fe7d4e1ead395347ce')
+sha256sums=('64c705e01dd0a3a20e05bffbb511a3920b3040760df673e49fe081b069f42e72')
 
