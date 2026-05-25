@@ -3,7 +3,7 @@
 
 pkgname=sonic-screen
 pkgver=6.6.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Screen management software for SonicDE Workspaces'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screen'
@@ -35,7 +35,7 @@ conflicts=(kscreen)
 provides=(kscreen)
 replaces=(kscreen)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('64c705e01dd0a3a20e05bffbb511a3920b3040760df673e49fe081b069f42e72')
+sha256sums=('c32c825529a69b30d81beeccce834a48bcc8e922401473210d922024693c6d1a')
 
 build() {
   cmake -B build  -S $pkgname-$pkgver \
