@@ -1,10 +1,13 @@
 # Maintainer: callmetango
 # Contributor: artist <artist@artixlinux.org>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Antonio Rojas <arojas@archlinux.org>
+# Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-screen
 pkgver=6.6.5
-pkgrel=2
-pkgdesc='Screen management software for SonicDE Workspaces'
+pkgrel=3
+pkgdesc='SonicDE screen management software'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screen'
 license=(LGPL-2.0-or-later)
@@ -29,11 +32,10 @@ depends=(gcc-libs
          sonic-frameworks-windowsystem
          sonic-interface-libraries
          sonic-screen-library)
-makedepends=(extra-cmake-modules)
-groups=(sonicde)
-conflicts=(kscreen)
+makedepends=(sonic-frameworks-cmake-modules)
 provides=(kscreen)
-replaces=(kscreen)
+conflicts=(kscreen)
+groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('c32c825529a69b30d81beeccce834a48bcc8e922401473210d922024693c6d1a')
 
